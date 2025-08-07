@@ -1,0 +1,28 @@
+@use 'src/assets/scss/vars'  as _vars;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: _vars.$font-primary;
+  height: 100%;
+}
+
+.container {
+  max-width: _vars.$desktop;
+  margin: 0 auto;
+}
+
+.alert-snackbar {
+  border: 1px solid rgb(119, 33, 2);
+  .mdc-snackbar__surface {
+    background-color: rgb(83, 23, 1) !important;
+  }
+}
+
+.success-snackbar {
+  border: 1px solid rgb(0, 90, 75);
+  .mdc-snackbar__surface {
+    background-color: rgb(1, 70, 58) !important;
+  }
+}
