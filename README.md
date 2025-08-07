@@ -40,6 +40,16 @@ La aplicación estará disponible en `http://localhost:4200`.
 
 -----
 
+-----
+
+### Producción
+
+Puedes acceder a la versión de producción de la aplicación en el siguiente enlace:
+
+[https://davidmartinez600.github.io/angular-users-list](https://davidmartinez600.github.io/angular-users-list)
+
+-----
+
 ### Credenciales de Acceso
 
 Usa estas credenciales para iniciar sesión:
