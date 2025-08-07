@@ -1,0 +1,14 @@
+<app-form-search-user (isFormValid$)="onChangeFormValidity($event)" (submitted)="onFormSubmit($event)">
+</app-form-search-user>
+
+<section class="w-4/5 m-auto pb-5">
+  <app-table-data
+    *ngIf="showDocumentOfUser"
+    [columnsTable]="columnsFilesUser"
+    [dataSource]="dataFilesUser"
+    [emptyTitleTable]="messageFileUser"
+    (eventActionSelect)="eventActionSelect($event)">
+  </app-table-data>
+</section>
+
+<app-loadder *ngIf="isLoadderShow"></app-loadder>

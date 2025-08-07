@@ -1,0 +1,12 @@
+<app-navbar-cards-cta [title]="'Administrador de Usuarios'" [ctaCards]="ctaCards"></app-navbar-cards-cta>
+
+<section class="m-5">
+  <app-table-data
+    [columnsTable]="columnsUsers"
+    [dataSource]="dataUsers"
+    [emptyTitleTable]="'No hay usuarios por mostrar'"
+    (eventActionSelect)="eventActionSelect($event)" >
+  </app-table-data>
+</section>
+
+<app-loadder *ngIf="isLoadderShow"></app-loadder>

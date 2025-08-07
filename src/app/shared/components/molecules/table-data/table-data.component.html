@@ -1,0 +1,60 @@
+<ng-container>
+  <section *ngIf="_dataSource && _dataSource.data.length > 0" class="my-20">
+    <mat-form-field>
+      <mat-label>Buscar coincidencias por: </mat-label>
+      <input matInput (keyup)="applyFilter($event)" #input />
+    </mat-form-field>
+
+    <div class="container-table mat-elevation-z4">
+      <mat-table #table  matSort [dataSource]="_dataSource" [class.isMobile]="isMobile" >
+        <ng-container *ngFor="let column of columnsTable; let i = index" [matColumnDef]="column.columnDef">
+          <mat-header-cell
+            *matHeaderCellDef
+            mat-sort-header
+            [ngClass]="{ 'is-actionShow': hasActionShow(column.columnDef) }">
+            {{ column.header }}
+          </mat-header-cell>
+          <mat-cell *matCellDef="let row" [ngClass]="{ 'is-actionShow': hasActionShow(column.columnDef) }">
+            <ng-container
+              *ngIf="column.isLink"
+              [ngTemplateOutlet]="actionShow"
+              [ngTemplateOutletContext]="{ row: row, column: column }">
+            </ng-container>
+            <ng-container *ngIf="!column.isLink">
+              <p [title]="row[column.columnDef]">
+                <span class="mobile-label">{{ column.header }} </span>
+                {{ row[column.columnDef] }}
+              </p>
+            </ng-container>
+          </mat-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns" [class.isMobile]="isMobile"></mat-row>
+      </mat-table>
+
+      <mat-paginator
+        [pageSize]="5"
+        [length]="_dataSource.data.length"
+        [pageSizeOptions]="[5, 10, 25, 100]"
+        aria-label="Seleccionar página de usuarios">
+      </mat-paginator>
+    </div>
+  </section>
+
+  <ng-container *ngIf="_dataSource.data.length == 0">
+    <app-empty-data-table [title]="emptyTitleTable"></app-empty-data-table>
+  </ng-container>
+</ng-container>
+
+<ng-template #actionShow let-row="row" let-column="column">
+  <button
+    (click)="eventActionShowFunction(column, row)"
+    aria-label="Ver detalles"
+    color="primary"
+    class="hover:bg-neutral-200 border border-black rounded-full p-2">
+   
+    <span>Detalles</span>
+  </button>
+</ng-template>
+
+

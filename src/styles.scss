@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+@use './src/assets/scss/normalize' as normalize;
+@use './src/assets/scss/global' as global;
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

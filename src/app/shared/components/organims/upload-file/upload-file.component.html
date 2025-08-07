@@ -1,0 +1,74 @@
+<section class="load-file">
+  <div
+    class="container"
+    #fileDropRef
+    [ngClass]="{ 'is-disbale': maxFilesUpload == files.length }"
+    appDnd
+    (fileDropped)="onFileDropped($event)">
+    <input
+      type="file"
+      #fileDropRef
+      id="fileDropRef"
+      [disabled]="maxFilesUpload == files.length"
+      multiple
+      [accept]="filesAcceps"
+      (change)="fileBrowseHandler($event)" />
+    <app-icon-upload />
+    <h3 class="mb-0">Arrastre o cargue hasta {{ maxFilesUpload }} archivo{{ maxFilesUpload > 1 ? 's' : '' }}</h3>
+    <p class="text-sm">
+      Tipo de archivo permitido{{ filesAcceps.length > 1 ? 's' : '' }}: <em> {{ showfilesAcceps }}</em> <br />
+      Tamaño de archivo permitido hasta: <em> {{ maxFileSizeMB }} MB</em>
+    </p>
+    <h3>o</h3>
+    <label for="fileDropRef" [ngClass]="{ 'is-disbale': maxFilesUpload == files.length }">Buscar un archivo</label>
+  </div>
+  <p class="my-2">Los archivo serán asignados directamente a este usuario.</p>
+
+  <div class="files-list">
+    <form [formGroup]="formUploadFile" (ngSubmit)="onSubmitFormFiles()">
+      <div formArrayName="fileNames">
+        <div class="single-file-container p-2"
+          *ngFor="let controlItem of getControlsFormUploadFile(); let i = index">
+
+          <section class="sing-file-name m-2" [formGroupName]="i">
+            <mat-form-field appearance="fill" class="w-full mb-4">
+              <mat-label>Nombre de control para el archivo</mat-label>
+              <input
+                matInput
+                placeholder="Digite un nombre control para el archivo"
+                autocomplete="off"
+                formControlName="fileNameControl" />
+              <mat-hint>Ingrese un nombre valido</mat-hint>
+
+              <mat-error class="text-xs text-red-600 block" *ngFor="let validation of validationMsgs.fileNameControl">
+                {{ validation.message }}
+              </mat-error>
+            </mat-form-field>
+          </section>
+
+          <section class="single-file m-2">
+            <div class="file-icon" style="width: 50px">
+              <app-icon-file />
+            </div>
+            <div class="info" *ngIf="files[i]">
+              <h4 class="name">{{ files[i].name }}</h4>
+              <p class="size">{{ formatBytes(files[i].size, 2) }}</p>
+              <app-progress-file [progress]="files[i].progress" />
+            </div>
+            <div class="delete" (click)="deleteFile(i)">
+              <app-icon-delete />
+            </div>
+          </section>
+
+        </div>
+      </div>
+      <div class="w-full mt-4 mb-10" *ngIf="files.length > 0">
+        <button mat-flat-button color="primary" type="submit" class="w-full" [disabled]="formUploadFile.invalid">
+          Asignar archivos
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<app-loadder *ngIf="isLoadderShow" />

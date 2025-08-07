@@ -1,0 +1,8 @@
+<section class="m-5">
+  <div class="grid grid-rows-1 mb-5">
+    <h1 class="text-2xl font-black text-[#3f51b5]">{{ title }}</h1>
+  </div>
+  <article class="2xl:grid-cols-6 gap-3 grid md:grid-cols-3 sm:grid-cols-2">
+    <app-card-small *ngFor="let cta of ctaCards" [ctaCard]="cta"></app-card-small>
+  </article>
+</section>

@@ -1,0 +1,9 @@
+<mat-card
+  class="flex gap-2.5 items-center mat-mdc-card mdc-card py-2.5 cursor-pointer ease-in-out hover:-translate-y-1 transition-all hover:bg-[#f8fafc]" (click)="navigateTo(ctaCard.routerLink, ctaCard.external)">
+  <mat-icon
+    aria-hidden="false"
+    [attr.aria-label]="ctaCard.title"
+    [fontIcon]="ctaCard.icon"
+    class="text-4xl w-auto h-full"></mat-icon>
+  <mat-card-content class="text-center p-0 font-medium">{{ ctaCard.title }}</mat-card-content>
+</mat-card>

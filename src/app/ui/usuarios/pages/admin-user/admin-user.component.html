@@ -1,0 +1,53 @@
+<app-navbar-cards-cta [title]="'Administrador de Usuarios'" [ctaCards]="ctaCards" />
+
+<!-- CASO DE USO PARA AGREGAR UN NUEVO USUARIO --->
+
+<section class="m-5 mt-10 grid grid-cols-1 lg:grid-cols-2 gap-4">
+  <mat-card class="p-6 shadow-md">
+    <mat-card-header>
+      <mat-card-title class="text-xl font-semibold text-[#3f51b5]">Información del Usuario</mat-card-title>
+      <mat-card-subtitle class="text-sm text-gray-600">Esta información es solo de lectura</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-divider class="my-4"></mat-divider>
+
+    <mat-card-content class="space-y-4 text-base">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <h4 class="font-medium text-gray-700">Nombres Completos</h4>
+          <p class="text-gray-900">{{ formNewUser.get('nameUser')?.value || '-' }}</p>
+        </div>
+
+        <div>
+          <h4 class="font-medium text-gray-700">Apellidos Completos</h4>
+          <p class="text-gray-900">{{ formNewUser.get('lastNameUser')?.value || '-' }}</p>
+        </div>
+
+        <div>
+          <h4 class="font-medium text-gray-700">Tipo de Documento</h4>
+          <p class="text-gray-900">{{ formNewUser.get('tipoDoc')?.value || '-' }}</p>
+        </div>
+
+        <div>
+          <h4 class="font-medium text-gray-700">Número de Documento</h4>
+          <p class="text-gray-900">{{ formNewUser.get('documentUser')?.value || '-' }}</p>
+        </div>
+
+        <div>
+          <h4 class="font-medium text-gray-700">Correo Electrónico</h4>
+          <p class="text-gray-900">{{ formNewUser.get('correoUser')?.value || '-' }}</p>
+        </div>
+
+        <div>
+          <h4 class="font-medium text-gray-700">Número de Celular</h4>
+          <p class="text-gray-900">{{ formNewUser.get('phoneUser')?.value || '-' }}</p>
+        </div>
+
+        <div>
+          <h4 class="font-medium text-gray-700">Rol del Usuario</h4>
+          <p class="text-gray-900 capitalize">{{ formNewUser.get('roleUser')?.value || '-' }}</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</section>
