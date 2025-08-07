@@ -1,88 +1,44 @@
-<h1 align="center">Arquetipo Angular Standalone</h1>
-<hr>
-<h2 align="center">Angular 15 - La plataforma moderna para desarrolladores web.</h2>
+Aquí tienes la versión más minimalista del archivo **README.md**. He eliminado cualquier mención a la fuente de los datos (`fakeUsers`) y he dejado solo lo esencial para que la aplicación pueda ser ejecutada y probada.
 
-<p align="center">
-  <img src="https://github.com/angular/angular/raw/main/aio/src/assets/images/logos/angular/angular.png" alt="angular-logo" width="123px" height="113px"/>
+-----
 
-  <img src="https://dbaeumer.gallerycdn.vsassets.io/extensions/dbaeumer/vscode-eslint/2.4.0/1675676105903/Microsoft.VisualStudio.Services.Icons.Default" alt="eslint-logo" width="105px" height="100px"/>
+````markdown
+# Aplicación de Prueba de Codificación en Angular
 
-  <img src="https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png" alt="jest-logo" width="100px" height="100px"/>
+Este proyecto es una aplicación web desarrollada con **Angular** que incluye un flujo de inicio de sesión, una lista de usuarios y una vista detallada de cada usuario.
 
-  <img src="https://seeklogo.com/images/P/prettier-logo-D5C5197E37-seeklogo.com.png" alt="prettier-logo" width="92px" height="92px"/>
+## Cómo Ejecutar el Proyecto
 
-  <br>
-  <br>
-  <i>Angular es una plataforma de desarrollo para crear aplicaciones web móviles y de escritorio <br> utilizando Typescript/JavaScript y otros lenguajes</i>
-  <br>
-</p>
+### Prerrequisitos
 
-<p align="center">
-  <a href="https://angular.io/docs" target="_blank">
-    <strong>www.angular.io</strong>
-  </a>
-  <br>
-</p>
+Asegúrate de tener instalados **Node.js** y **Angular CLI**.
 
+### Pasos
 
-# Angular CLI
+1.  **Clona el repositorio** y ve a la carpeta del proyecto.
+    ```bash
+    git clone https://github.com/davidmartinez600/angular-users-list.git
+    cd angular-users-list
+    ```
 
-Este proyecto ha sido genereado con [Angular CLI](https://github.com/angular/angular-cli) versión 15
+2.  **Instala las dependencias**:
+    ```bash
+    npm install
+    ```
 
-Este proyecto trabaja bajo Angular v15 mediante STANDALONE, puede revisar las TAGs o Ramas del respositorio actual para ver las versiones disponibles.
+3.  **Ejecuta la aplicación**:
+    ```bash
+    ng serve
+    ```
 
+La aplicación estará disponible en `http://localhost:4200`.
 
-#### Requerimientos y dependencias
+---
 
-|  package use  |  version  |
-|---------------|-----------|
-|  Angular CLI  |  15.2     |
-|  Node         |  18       |
-|  Npm          |  9        |
+## Credenciales de Acceso
 
+Usa estas credenciales para iniciar sesión:
 
-## Servidor de Desarrollo
-
-Ejecute `ng serve` o `npm run start` para un servidor de desarrollo. Navegue hasta `http://localhost:4200/`. La aplicación se recargará automáticamente si cambia alguno de los archivos fuente. Admite componentes independientes.
-
-## Aruitectura de Codigo.
-
-Ejecute `ng generate component component-name --standalone` para generar un nuevo componente. También puede usar `ng generate directive|pipe|service|class|guard|interface|enum|module`. Tenga en cuenta el uso del principio LIFT para Angular o use la extensión Angular schematics para Visual Studio Code.
-
-
-## Build
-
-Ejecute `npm run build` para construir el proyecto. Los artefactos de compilación se almacenarán en el directorio `dist/`.
-
-## Ejecutando Test Unitarios
-
-Para ejecutar las pruebas unitarias a través de [JEST](https://jestjs.io/docs/getting-startedo). De forma predeterminada, AppComponent evalúa 3 pruebas unitarias. Cada componente debe contener pruebas unitarias y una covertura minima del 70%. 
-
-Ejeucte los comandos según corresponda:
-- `npm run test` 
-- `npm run test:watch` 
-- `npm run test:coverage` 
-
-## ESLint - Prettier
-
-ESLint y Prettier te ayudan a mantener tu código limpio y legible, lo que a su vez te ayuda a reducir errores y mejorar la calidad de tu código. Por defecto este proyecto ya contiene las configuraciones necesarias, las reglas de ESLint en el archivo .eslintrc.json según las necesidades de su Proyecto.
-
-Ejeucte los comandos según corresponda:
-- `npm run lint` 
-- `npm run lint-all` 
-- `npm run lint-watch` 
-
-Para obtener el mejor rendimiento, debes haber instalado y configurado las extensiones necesarias y/o recomendadas:
-- **ESLint** -> vscode-eslint
-- **Error Lens** -> usernamehw.errorlens
-- **Prettier - Code formatter** -> esbenp.prettier-vscode
-
-## Branch, Commits y GIT
-
-Para la creación de Branch revise la estrategia de Branching Adecuada para el proyecto. 
-Para la generación de commits haga uso de Conventional Commits puede consultar mas [aquí](https://www.conventionalcommits.org/en/v1.0.0/)
-
-
-## Soporte de CLI
-
-Para obtener más ayuda sobre Angular CLI, use `ng help` o consulte la página [Angular CLI Overview and Command Reference](https://angular.io/cli).
+-   **Usuario**: `test1@example.com`
+-   **Contraseña**: `123456`
+````

@@ -97,7 +97,7 @@ export class LoginComponent {
 
   constructor() {
     this.buildForm();
-    this._titleService.setTitle('LABCHSL | Iniciar Sesión');
+    this._titleService.setTitle('Users');
   }
 
   /**
