@@ -1,5 +1,3 @@
-Aquí tienes la versión del `README.md` sin emojis y con los bloques de código de `git clone` y `cd` separados, como lo solicitaste.
-
 -----
 
 ### Aplicación de Prueba de Codificación en Angular
