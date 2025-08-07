@@ -1,5 +1,3 @@
------
-
 ### Aplicación de Prueba de Codificación en Angular
 
 Este proyecto es una aplicación web desarrollada con **Angular** que incluye un flujo de inicio de sesión, una lista de usuarios y una vista detallada de cada usuario.
@@ -46,5 +44,5 @@ La aplicación estará disponible en `http://localhost:4200`.
 
 Usa estas credenciales para iniciar sesión:
 
-  - **Usuario**: `test1@example.com`
-  - **Contraseña**: `123456`
+  - **Usuario**: `esdavidmartinez600@gmail.com`
+  - **Contraseña**: `qwerty`
