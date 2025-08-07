@@ -2,7 +2,7 @@
 
 Este proyecto es una aplicación web desarrollada con **Angular** que incluye un flujo de inicio de sesión, una lista de usuarios y una vista detallada de cada usuario.
 
-## 🛠️ Cómo Ejecutar el Proyecto
+## Cómo Ejecutar el Proyecto
 
 ### Prerrequisitos
 
@@ -29,7 +29,7 @@ Asegúrate de tener instalados **Node.js** y **Angular CLI**.
 
 ---
 
-## 🔒 Credenciales de Acceso
+## Credenciales de Acceso
 
 Usa estas credenciales para iniciar sesión:
 
